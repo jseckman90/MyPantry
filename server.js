@@ -1,4 +1,3 @@
-  
 ///////////////////////////
 // Environmental Variables
 ///////////////////////////
@@ -18,13 +17,17 @@ const app = express();
 const mongoose = require("./db/dbconn");
 
 // ROUTERS
-
+const itemRouter = require('./controllers/items/index')
+const authRouter = require("./controllers/auth");
+// const testRouter = require("./controllers/test");
+// const tweetRouter = require("./controllers/tweets");
 
 // OTHER IMPORTS
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+
 
 ///////////////////////////////
 // Set View Engine
@@ -52,16 +55,18 @@ app.use(methodOverride("_method"));
 // app.use(express.json()) uncomment if using json
 app.use(morgan("tiny")); //logging
 
+
 ///////////////
 //Routes and Routers
 //////////////
-app.get("/", (req, res) => {
-  res.render("index.jsx", { hello: "Hello World" });
-});
+// app.get("/", (req, res) => {
+//   res.render("index.jsx", { hello: "Hello World" });
+// });
 
 app.use("/auth", authRouter);
-app.use("/test", testRouter);
-app.use("/tweet", tweetRouter);
+// app.use("/test", testRouter);
+// app.use("/tweet", tweetRouter);
+app.use("/", itemRouter)
 
 ////////////////////////
 //APP LISTENER

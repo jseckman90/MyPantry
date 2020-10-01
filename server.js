@@ -17,9 +17,9 @@ const app = express();
 const mongoose = require("./db/dbconn");
 
 // ROUTERS
-const itemRouter = require('./controllers/items/index')
 const authRouter = require("./controllers/auth");
 const testRouter = require("./controllers/test");
+const itemRouter = require("./controllers/items/index")
 
 // OTHER IMPORTS
 const session = require("express-session");

@@ -7,15 +7,30 @@ class Layout extends React.Component {
         <head>
           <title>{this.props.title}</title>
           <link rel="stylesheet" href="/css/style.css"/>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous"></link>
           <script src="/js/app.js"></script>
         </head>
         <body>
           <header>
-            <h1>This is the page header</h1>
+            <div className="container">
+              <div className="row">
+                <div className="col new-btn">
+                <a href={"/items/new"} className="btn btn-primary btn-nav">New Item</a>
+                </div>
+                <div className="col-6">
+                  <a href={'/items'}><img src="LogoMakr_22Zc7g.png" id="logo" className="img-fluid"/></a>
+                </div>
+                <div className="col new-btn">
+                <a href={"/auth/signup"} className="btn btn-primary btn-nav">Sign Up</a>
+                <a href={"/auth/login"} className="btn btn-primary btn-nav">Log In</a>
+                </div>
+              </div>
+            </div>
           </header>
+
           <main>{this.props.children}</main>
           <footer>
-            <h1>This is my footer</h1>
+            <h1></h1>
           </footer>
         </body>
       </html>

@@ -1,18 +1,29 @@
 const { Router } = require("express");
 const router = Router();
-const Item = require('/Users/joshseckman/Desktop/seir-flex-zen-work/projects/project-2/project2/models/items/index.js')
+const auth = require('../authmiddleware')
+const Item = require('../../models/items')
 
 
 // INDEX
-router.get('/items', (req, res) => {
-    Item.find({}, (error, allItems) => {
-      res.render("index", {items: allItems})
-    })
-})
+// router.get('/items', (req, res) => {
+//     Item.find({}, (error, allItems) => {
+//       res.render("index", {items: allItems})
+//     })
+// })
+
+router.get("/items", auth, async (req, res) => {
+    // finds Individual users data
+    try {
+        const items = await Item.find({username: req.session.username})
+    res.render("index", {items})
+    } catch (err) {
+        console.log(err)
+    }
+  });
 
 
-//new
-router.get('/items/new', (req, res) => {
+//NEW
+router.get('/items/new', auth, (req, res) => {
     res.render("new")
 })
 
@@ -33,10 +44,10 @@ router.put('/items/:id', (req, res)=>{
 });
   
 //CREATE
-router.post('/items/', (req, res)=>{
-    Item.create(req.body, (error, createdItem)=>{
-        res.redirect('/items')
-    });
+router.post('/items/',auth, async (req, res)=>{
+    req.body.username = req.session.username
+    const newItem = await Item.create(req.body)
+    res.redirect('/items')
 });
   
 //EDIT

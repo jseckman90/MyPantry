@@ -16,7 +16,7 @@ const router = Router();
 //TEST ROUTE TO SHOW HOW AUTH MIDDLEWARE WORKS
 
 router.get("/", auth, (req, res) => {
-  res.send("if you see this you are logged in");
+  res.send(`if you see this you are logged in`);
 });
 
 ///////////////////////////////////////

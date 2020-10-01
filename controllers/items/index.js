@@ -4,13 +4,13 @@ const auth = require('../authmiddleware')
 const Item = require('../../models/items')
 
 
-// INDEX
-// router.get('/items', (req, res) => {
-//     Item.find({}, (error, allItems) => {
-//       res.render("index", {items: allItems})
-//     })
+// //signup
+
+// router.get("/", (req,res) => {
+//   res.render('auth/signup')
 // })
 
+//INDEX
 router.get("/items", auth, async (req, res) => {
     // finds Individual users data
     try {

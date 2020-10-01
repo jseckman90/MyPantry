@@ -58,9 +58,9 @@ app.use(morgan("tiny")); //logging
 ///////////////
 //Routes and Routers
 //////////////
-// app.get("/", (req, res) => {
-//   res.render("index.jsx", { hello: "Hello World" });
-// });
+app.get("/", (req, res) => {
+  res.render("layout.jsx", { hello: "Hello World" });
+});
 
 app.use("/auth", authRouter);
 app.use("/test", testRouter);

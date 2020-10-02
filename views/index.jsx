@@ -25,7 +25,6 @@ class Index extends React.Component {
     const {items} = this.props
     return (
       <Layout title="My Pantry">
-        <a href={'/items/new'}>add new </a>
         <div className="container item-container">
           <div className="category">
             <div className="category-title">
@@ -369,7 +368,7 @@ class Index extends React.Component {
           </div>
 
           
-          <div className="grocery-list">
+          <div className="category">
             <div className="category-title">
               <h3>Grocery List</h3>
             </div>

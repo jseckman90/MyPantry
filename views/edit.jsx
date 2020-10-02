@@ -46,7 +46,7 @@ class Edit extends React.Component{
                 <label for="quantity">Minimum Quantity</label>
                 <input type="number" className="form-control" id="quantity" name="minqty" defaultValue={this.props.item.minqty}/>
             </div>
-            <input type="submit" value="Submit Changes"/>
+            <input type="submit" className="btn btn-primary" value="Submit Changes"/>
         </form>
         </div>
       </Layout>

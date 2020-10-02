@@ -15,14 +15,12 @@ class Layout extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col new-btn">
-                
+                <a href={"/items/new"} className="btn btn-primary btn-nav">New Item</a>
                 </div>
                 <div className="col-6">
-                  <a href={'/items'}><img src="LogoMakr_22Zc7g.png" id="logo" className="img-fluid"/></a>
+                  <a href={'/items'}><img src="/images/mypantrylogo.png" id="logo" className="img-fluid"/></a>
                 </div>
                 <div className="col new-btn">
-                <a href={"/auth/signup"} className="btn btn-primary btn-nav">Sign Up</a>
-                <a href={"/auth/login"} className="btn btn-primary btn-nav">Log In</a>
                 <a href={"/auth/logout"} className="btn btn-primary btn-nav">Log Out</a>
                 </div>
               </div>

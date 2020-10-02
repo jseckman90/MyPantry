@@ -3,7 +3,6 @@ const Layout = require('./layout')
 
 const useButton = (item) => {
     if (item.qty > 0) {
-        console.log(item.qty)
         return(
             <div>
             <form action={`/items/${item._id}?_method=PUT`} method="POST">
@@ -28,17 +27,16 @@ class Show extends React.Component {
             <Layout title={item.name}>
                 
                 <div className="item-show">
-                <div class="card mb-3" >
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                        <img src={ item.img } class="card-img" alt="..."/>
+                <div className="card mb-3" >
+                    <div className="row no-gutters">
+                        <div className="col-md-4">
+                        <img src={ item.img } className="card-img" alt="..."/>
                         </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
+                        <div className="col-md-8">
+                            <div className="card-body">
                                 <h5 className="card-title">{ item.name }</h5>
-                                <h5 className="card-title">{ item.category }</h5>
-                                <h5 className="card-title">{ item.description }</h5>
-                                <h5 className="card-title">QOH: { item.qty }</h5>
+                                <h5 className="card-title">Quantity On Hand: { item.qty }</h5>
+                                <h5 className="card-title">Minimum Quantity: { item.minqty }</h5>
                                 <br/>
                                 <a href={`/items/${item._id}/edit`}>Edit This Product</a><br/>
                                 <br/>

@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
 
 h1 {
-    font-family: 'Poiret One', cursive;
-    color: red;
+    font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
 }
 
@@ -19,15 +20,19 @@ h1 {
     flex-flow: row wrap;
 }
 
+
+
 .category-title {
     text-align: center;
-    background-color: grey;
+    background-color: rgb(86, 194, 35);
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .col-6 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 15px;
 }
 
 #logo {
@@ -38,6 +43,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .view-btn {
@@ -45,13 +51,14 @@ h1 {
     left: 5px;
     bottom: 10px;
     right: 5px;
-    background-color: rgb(12, 255, 0) !important;
+    background-color: rgb(86, 194, 35) !important;
     color: black !important;
 }
 
 .btn-nav {
-    background-color: rgb(12, 255, 0) !important;
+    background-color: rgb(86, 194, 35) !important;
     color: black !important;
+    border: none !important;
 }
 
 .item-card {
@@ -170,3 +177,53 @@ h1 {
         box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
 
     }
+
+    .mb-3 {
+        width: 100% !important;
+    }
+
+    .grocery-list-items {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .auth-form {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+       
+    }
+
+    .auth-container {
+        display: flex;
+        justify-content: center;
+    }
+    .home-container {
+        display: flex;
+        justify-content: center;
+        
+         
+    }
+    .auth-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        
+    }
+
+    .home {
+        margin: 3px;
+    }
+
+    .category {
+        margin: 10px
+    }
+
+    .item-show {
+        display:flex;
+        width: 65%;
+        justify-content: center;
+    }
+
+   

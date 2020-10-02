@@ -12,7 +12,6 @@ const Item = require('../../models/items')
 
 //INDEX
 router.get("/items", auth, async (req, res) => {
-    // finds Individual users data
     try {
         const items = await Item.find({username: req.session.username})
     res.render("index", {items})

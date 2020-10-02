@@ -27,6 +27,46 @@ class Layout extends React.Component {
                 </div>
               </div>
             </div>
+
+            {/* <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Produce</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dairy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Canned Goods</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Frozen Foods</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Meat and Fish</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Spices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Condiments / Sauces / Oils</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Breads / Pastas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Snacks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Beverages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cereals</a>
+              </li>
+            </ul> */}
+
           </header>
 
           <main>{this.props.children}</main>

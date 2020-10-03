@@ -1,28 +1,28 @@
-# Mongo - Express - Express React Views Template
+# project-2
 
-## USING THIS TEMPLATE:
+# URL: 
 
-- Make sure to run npm install
+https://jszenproject2.herokuapp.com/
+## My Pantry:
+Is an pantry inventory application that allows the user to login to create, edit, and remove items from their pantry. Keep track of the items in your home pantry to help with creating grocery lists and/or checking your own inventory to see what ingredients you have for a specific recipe.
 
-- Environment Files are in a .env, create with your env variables. Here are some needed variables for this template to get you started. You can rename template.env into .env to get started.
+## Technologies Used
+HTML
+CSS Flexbox
+Bootstrap
+JavaScript
+Express.js
+React.js
+Node.js
+Mongo
+Mongoose
 
-```
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/
-DB_NAME=myDatabase
-SECRET=cheese
-```
+## Unsolved Problems
+I need to learn the logic to be able to increase or decrease the qty of an item by a specific amount each time the Add One button or Use One button is clicked.
 
-## Commands
 
-`npm run dev` run dev server
+## Future additions
+- Pull in an API that has grocery items that can be called in as opposed to adding each one separately.
+- Allow a user to add an image from their phone as opposed to only having an Image URL field on the new page
+- Add a separate Grocery List page.  Currently have to scroll to the bottom of the page to see grocery list
 
-`npm run start` run in production more
-
-- For production you should add a store property to sessions that'll store the session in redis or mongo. See the express-session documentation to learn more.
-
-- session auth built in, the user model is in **models/auth** and the auth routes are in **controllers/auth**
-
-- If you want the connect.session() warning to go away you can configure a mongo session store using the following library => https://www.npmjs.com/package/connect-mongo
-
-MAKE SURE TO JOIN THE SLACK AND DISCORD COMMUNITIES AT DEVNURSERY.COM

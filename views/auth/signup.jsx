@@ -14,8 +14,8 @@ class Index extends React.Component {
           <div class="form-group">
             <input type="text" name="password" class="form-control" placeholder="Password"/>
           </div>
-  
-          <button type="submit" value="signup" class="btn btn-primary btn-sm btn-block">Sign Up</button>
+          <p>Already a Member? <a href="/auth/login">Log In</a></p>
+          <button type="submit" value="signup" class="btn btn-outline-dark btn-sm btn-block">Sign Up</button>
         </form>
         </div>
         </div>

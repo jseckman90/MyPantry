@@ -31,10 +31,8 @@ class Index extends React.Component {
                             <h5 className="card-text">Current Stock: {item.qty}</h5>
                             <h3 className="card-text">Buy at least: {item.minqty - item.qty}</h3>
                             <form action={`/items/${item._id}?_method=PUT`} method="POST">
-                                  <input type="hidden" name="qty" value={item.qty + 1}/>
-                                  {/* <input type="submit" value="Add One"  className="info btn btn-outline-dark btn-sm"/> */}
-                                  <input type="number" name="qty" className="form-control" />
-                                  
+                              <input type="hidden" name="qty" value={item.qty + 1}/>
+                              <input type="submit" value="Add One"  className="info btn btn-outline-dark btn-sm"/>
                             </form>
                             
                           </div>

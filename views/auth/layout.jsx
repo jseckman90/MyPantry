@@ -17,8 +17,9 @@ class Layout extends React.Component {
                 <div className="col new-btn">
                 
                 </div>
-                <div className="col-6">
-                 <img src="/images/mypantrylogo.png" id="logo" className="img-fluid"/>
+                <div className="col-6 auth-logo">
+                 <img src="/images/logonav.png" id="logo" className="img-fluid" />
+                 <h1 className="new-title">MyPantry</h1>
                 </div>
                 <div className="col new-btn">
 

@@ -218,6 +218,7 @@
     .auth-form {
         display: flex;
         justify-content: center;
+        text-align: center;
         width: 30%;
        
     }
@@ -253,4 +254,18 @@
         justify-content: center;
     }
 
+    .show-card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #logo {
+        height:75px;
+    }
+
+    .auth-logo {
+        display:flex;
+        flex-direction: column;
+    }
    

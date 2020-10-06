@@ -7,7 +7,9 @@ class Edit extends React.Component{
   render() {
     return (
       <Layout title="Edit Pantry Item">  
-          
+        <div className="new-title">
+              <h1>Edit Pantry Item</h1>
+            </div>  
         <div className="container form-container">
         
         <form action={`/items/${this.props.item._id}?_method=PUT`} method="POST" className="edit-form">

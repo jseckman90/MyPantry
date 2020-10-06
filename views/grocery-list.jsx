@@ -8,12 +8,11 @@ class Index extends React.Component {
     const {items} = this.props
     return (
       <Layout title="My Pantry">
-        <a href={'/items/new'}>add new </a>
         <div className="container item-container">
           
           <div className="grocery-list">
-            <div className="category-title">
-              <h3>Grocery List</h3>
+            <div className="new-title">
+              <h1>Grocery List</h1>
             </div>
             <div className="pantry-items grocery-list-items">
               {

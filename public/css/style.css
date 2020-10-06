@@ -1,16 +1,35 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 
-h1 {
-    font-family: 'Open Sans Condensed', sans-serif;
+
+.display-4 {
+    font-family: 'Aladin', cursive;
+    font-size: 6rem !important;
+    color: white;
     text-align: center;
 }
 
+.new-title {
+    font-family: 'Aladin', cursive;
+    text-align: center;    
+}
 
 
+.darken {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("/images/pantryhero.jpg");
+}
 
-
+ .jumbotron {
+     color: white;
+     text-align: center;
+ }
 
 
 .pantry-items {
@@ -21,12 +40,20 @@ h1 {
     margin-bottom: 35px
 }
 
+.lead, .btn-outline-light {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 800 !important;
+}
+
 
 
 .category-title {
     text-align: center;
-    background-color: rgb(86, 194, 35);
+    border: 1px solid darkgray;
+    color: darkgrey;
     font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .col-6 {
@@ -44,7 +71,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .view-btn {

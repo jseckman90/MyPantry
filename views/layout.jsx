@@ -12,59 +12,25 @@ class Layout extends React.Component {
         </head>
         <body>
           <header>
-            <div className="container">
-              <div className="row">
-                <div className="col new-btn">
-                <a href={"/items/new"} className="btn btn-primary btn-nav">New Item</a>
-                </div>
-                <div className="col-6">
-                  <a href={'/items'}><img src="/images/mypantrylogo.png" id="logo" className="img-fluid"/></a>
-                </div>
-                <div className="col new-btn">
-                <a href={"/auth/logout"} className="btn btn-primary btn-nav">Log Out</a>
-                </div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand new-title" href="/items"><img src="/images/logonav.png" width="30" height="30" alt="" loading="lazy"></img>  MyPantry</a>
+  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href={'/items'}>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/items/grocery-list">Grocery List</a>
+                </li>
+              </ul>
+                <a href="/auth/logout" class="btn btn-outline-dark my-2 my-sm-0" >Log Out</a>
               </div>
-            </div>
-
-            {/* <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Produce</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Dairy</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Canned Goods</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Frozen Foods</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Meat and Fish</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Spices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Condiments / Sauces / Oils</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Breads / Pastas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Snacks</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Beverages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cereals</a>
-              </li>
-            </ul> */}
-
+          </nav>
           </header>
 
           <main>{this.props.children}</main>

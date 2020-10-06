@@ -6,7 +6,7 @@ class New extends React.Component {
         return (
         <Layout title="New Pantry Item">
             
-            <h1>New Pantry Item</h1>
+            <h1 className ="new-title">New Pantry Item</h1>
             <div className="container form-container">
             <form action action="/items" method="POST">
                 <div class="form-group">

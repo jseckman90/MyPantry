@@ -17,19 +17,6 @@ Node.js
 Mongo
 Mongoose
 
-## Approach Taken
-Started by creating a schema with the relevant info needed for the app.
-
-Created a basic index page and route and mapped over the database display items.  Created divs for each category from the select option on the create page.
-
-Created show ,edit, and create routes and pages.
-
-Added Styling with CSS Flexbox and Bootstrap
-
-
-## Unsolved Problems
-I need to learn the logic to be able to increase or decrease the qty of an item by a specific amount each time the Add One button or Use One button is clicked.
-
 
 ## Future additions
 - Pull in an API that has grocery items that can be called in as opposed to adding each one separately.

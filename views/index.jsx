@@ -66,14 +66,41 @@ class Index extends React.Component {
           <a
             class="btn btn-outline-light btn-lg"
             href="/items/new"
-            role="button"
-          >
+            role="button">
             Add Pantry Item
           </a>
         </div>
 
         <div className="container item-container">
-          <div className="category">
+          {items.map((item) => {
+            console.log(item);
+            switch (item) {
+              case item.category === "produce":
+                return (
+                  <div className="category">
+                    <div className="category-title">
+                      <h3>Produce</h3>
+                    </div>
+                    <div className="pantry-items">{itemDisplay(item)};</div>
+                  </div>
+                );
+                break;
+              case item.category === "dairy":
+                return (
+                  <div className="category">
+                    <div className="category-title">
+                      <h3>Dairy</h3>
+                    </div>
+                    <div className="pantry-items">{itemDisplay(item)};</div>
+                  </div>
+                );
+                break;
+              default:
+                console.log("no items");
+            }
+          })}
+
+          {/* <div className="category">
             <div className="category-title">
               <h3>Produce</h3>
             </div>
@@ -84,8 +111,8 @@ class Index extends React.Component {
                 }
               })}
             </div>
-          </div>
-          <div className="category">
+          </div> */}
+          {/* <div className="category">
             <div className="category-title">
               <h3>Dairy</h3>
             </div>
@@ -96,8 +123,8 @@ class Index extends React.Component {
                 }
               })}
             </div>
-          </div>
-          <div className="category">
+          </div> */}
+          {/* <div className="category">
             <div className="category-title">
               <h3>Canned Goods</h3>
             </div>
@@ -205,7 +232,7 @@ class Index extends React.Component {
                 }
               })}
             </div>
-          </div>
+          </div> */}
 
           <div className="category">
             <div className="category-title">
@@ -231,8 +258,7 @@ class Index extends React.Component {
 
                           <form
                             action={`/items/${item._id}?_method=PUT`}
-                            method="POST"
-                          >
+                            method="POST">
                             <input
                               type="hidden"
                               name="qty"

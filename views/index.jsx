@@ -59,7 +59,7 @@ class Index extends React.Component {
             return (
               <div id={cat} className="category">
                 <div className="category-title">
-                  <h3>{cat}</h3>
+                  <h3>{cat.toUpperCase()}</h3>
                 </div>
                 <div className="pantry-items">
                   {items.map((item) => {

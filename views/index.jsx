@@ -23,27 +23,16 @@ const useButton = (item) => {
 const itemDisplay = (item) => {
   return (
     <div className="col-sm-2">
-      <div className="hovereffect">
-        <img
-          className="img-responsive"
-          src={item.img}
-          className="card-img-top img-fluid"
-          alt={item.name}
-        />
-        <div className="overlay">
-          <h4>{item.name}</h4>
-          <h6> Qty: {item.qty} </h6>
-          <span>{useButton(item)}</span>
-          <form action={`/items/${item._id}?_method=PUT`} method="POST">
-            <input type="hidden" name="qty" value={item.qty + 1} />
-            <input
-              type="submit"
-              value="Add One"
-              className="info btn btn-outline-light btn-sm"
-            />
-          </form>
-          <a className="info" href={`/items/${item._id}`}>
-            View
+      <div class="card" style={{ width: "18rem" }}>
+        <img class="card-img-top" src={item.img} alt={item.name} />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">
+            Go somewhere
           </a>
         </div>
       </div>
@@ -66,8 +55,7 @@ class Index extends React.Component {
           <a
             class="btn btn-outline-light btn-lg"
             href="/items/new"
-            role="button"
-          >
+            role="button">
             Add Pantry Item
           </a>
         </div>
@@ -231,8 +219,7 @@ class Index extends React.Component {
 
                           <form
                             action={`/items/${item._id}?_method=PUT`}
-                            method="POST"
-                          >
+                            method="POST">
                             <input
                               type="hidden"
                               name="qty"

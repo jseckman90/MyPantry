@@ -21,11 +21,7 @@ const useButton = (item) => {
       <div>
         <form action={`/items/${item._id}?_method=PUT`} method="POST">
           <input type="hidden" name="qty" value={item.qty - 1} />
-          <input
-            type="submit"
-            value="Use One"
-            className="info btn btn-outline-light btn-sm"
-          />
+          <input type="submit" value="Use One" className="btn btn-primary" />
         </form>
       </div>
     );
@@ -34,7 +30,6 @@ const useButton = (item) => {
   }
 };
 
-<<<<<<< HEAD
 const itemDisplay = (item) => {
   return (
     <div className="col-sm-2">
@@ -55,8 +50,6 @@ const itemDisplay = (item) => {
   );
 };
 
-=======
->>>>>>> 125bb16ad5eb8b541f9507d791369891acd4a0f8
 class Index extends React.Component {
   render() {
     const { items } = this.props;
@@ -88,16 +81,16 @@ class Index extends React.Component {
                   {items.map((item) => {
                     if (item.category === cat) {
                       return (
-                        <div className="col-sm-2">
-                          <div className="hovereffect">
+                        <>
+                          <div class="card" style={{ width: "18rem" }}>
                             <img
-                              className="img-responsive"
+                              class="card-img-top"
                               src={item.img}
-                              className="card-img-top img-fluid"
                               alt={item.name}
                             />
-                            <div className="overlay">
-                              <h4>{item.name}</h4>
+                            <div class="card-body">
+                              <h5 class="card-title">{item.name}</h5>
+
                               <h6> Qty: {item.qty} </h6>
                               <span>{useButton(item)}</span>
                               <form
@@ -111,7 +104,7 @@ class Index extends React.Component {
                                 <input
                                   type="submit"
                                   value="Add One"
-                                  className="info btn btn-outline-light btn-sm"
+                                  className="btn btn-primary"
                                 />
                               </form>
                               <a className="info" href={`/items/${item._id}`}>
@@ -119,7 +112,7 @@ class Index extends React.Component {
                               </a>
                             </div>
                           </div>
-                        </div>
+                        </>
                       );
                     }
                   })}

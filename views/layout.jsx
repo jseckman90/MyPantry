@@ -5,6 +5,23 @@ class Layout extends React.Component {
     return (
       <html>
         <head>
+          <meta
+            name="description"
+            content="MyPantry is a pantry inventory application that allows the user to login to create, edit, and remove items from their pantry. Keep track of the items in your home pantry to help with creating grocery lists and/or checking your own inventory to see what ingredients you have for a specific recipe."
+          />
+          <meta name="title" property="og:title" content="MyPantry" />
+          <meta property="og:type" content="Website" />
+          <meta
+            name="image"
+            property="og:image"
+            content="https://i.imgur.com/hRubOyQ.png"
+          />
+          <meta
+            name="description"
+            property="og:description"
+            content="MyPantry is a pantry inventory application that allows the user to login to create, edit, and remove items from their pantry. Keep track of the items in your home pantry to help with creating grocery lists and/or checking your own inventory to see what ingredients you have for a specific recipe."
+          />
+          <meta name="author" content="Josh Seckman" />
           <title>{this.props.title}</title>
           <link rel="stylesheet" href="/css/style.css" />
           <link

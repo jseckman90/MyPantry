@@ -51,16 +51,16 @@ const displayItem = (item) => {
         <img class="card-img-top" src={item.img} alt={item.name} />
         <div class="card-body">
           <h5 class="card-title">{item.name}</h5>
-          <div
-            class="qty-btn"
-            style={{ display: "flex", border: "2px solid red" }}>
+          <div class="qty-btn">
             <span>{useButton(item)}</span>
             <h6> Qty: {item.qty} </h6>
             <span>{addButton(item)}</span>
           </div>
 
-          <a className="info" href={`/items/${item._id}`}>
-            View
+          <a
+            className=" detail-btn btn btn-primary"
+            href={`/items/${item._id}`}>
+            Details
           </a>
         </div>
       </div>

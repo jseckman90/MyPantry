@@ -21,7 +21,10 @@ const useButton = (item) => {
       <div>
         <form action={`/items/${item._id}?_method=PUT`} method="POST">
           <input type="hidden" name="qty" value={item.qty - 1} />
-          <button type="submit" value="Use One" className="btn btn-primary">
+          <button
+            type="submit"
+            value="Use One"
+            className="btn btn-outline-secondary">
             <i class="fas fa-minus"></i>
           </button>
         </form>
@@ -36,7 +39,10 @@ const addButton = (item) => {
     <div>
       <form action={`/items/${item._id}?_method=PUT`} method="POST">
         <input type="hidden" name="qty" value={item.qty + 1} />
-        <button type="submit" value="Add One" className="btn btn-primary">
+        <button
+          type="submit"
+          value="Add One"
+          className="btn btn-outline-secondary">
           <i class="fas fa-plus"></i>
         </button>
       </form>
@@ -58,7 +64,7 @@ const displayItem = (item) => {
           </div>
 
           <a
-            className=" detail-btn btn btn-primary"
+            className=" detail-btn btn btn-outline-info"
             href={`/items/${item._id}`}>
             Details
           </a>

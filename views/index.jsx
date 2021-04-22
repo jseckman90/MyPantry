@@ -21,11 +21,9 @@ const useButton = (item) => {
       <div>
         <form action={`/items/${item._id}?_method=PUT`} method="POST">
           <input type="hidden" name="qty" value={item.qty - 1} />
-          <input
-            type="submit"
-            value="Use One"
-            className="info btn btn-outline-light btn-sm"
-          />
+          <button type="submit" value="Use One" className="btn btn-primary">
+            <i class="fas fa-minus"></i>
+          </button>
         </form>
       </div>
     );
@@ -33,30 +31,43 @@ const useButton = (item) => {
     return <h5>You are out of {item.name}</h5>;
   }
 };
-
-<<<<<<< HEAD
-const itemDisplay = (item) => {
+const addButton = (item) => {
   return (
-    <div className="col-sm-2">
-      <div class="card" style={{ width: "18rem" }}>
-        <img class="card-img-top" src={item.img} alt={item.name} />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">
-            Go somewhere
-          </a>
-        </div>
-      </div>
+    <div>
+      <form action={`/items/${item._id}?_method=PUT`} method="POST">
+        <input type="hidden" name="qty" value={item.qty + 1} />
+        <button type="submit" value="Add One" className="btn btn-primary">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
     </div>
   );
 };
 
-=======
->>>>>>> 125bb16ad5eb8b541f9507d791369891acd4a0f8
+const displayItem = (item) => {
+  return (
+    <>
+      <div class="card" style={{ width: "18rem" }}>
+        <img class="card-img-top" src={item.img} alt={item.name} />
+        <div class="card-body">
+          <h5 class="card-title">{item.name}</h5>
+          <div class="qty-btn">
+            <span>{useButton(item)}</span>
+            <h6> Qty: {item.qty} </h6>
+            <span>{addButton(item)}</span>
+          </div>
+
+          <a
+            className=" detail-btn btn btn-primary"
+            href={`/items/${item._id}`}>
+            Details
+          </a>
+        </div>
+      </div>
+    </>
+  );
+};
+
 class Index extends React.Component {
   render() {
     const { items } = this.props;
@@ -87,40 +98,7 @@ class Index extends React.Component {
                 <div className="pantry-items">
                   {items.map((item) => {
                     if (item.category === cat) {
-                      return (
-                        <div className="col-sm-2">
-                          <div className="hovereffect">
-                            <img
-                              className="img-responsive"
-                              src={item.img}
-                              className="card-img-top img-fluid"
-                              alt={item.name}
-                            />
-                            <div className="overlay">
-                              <h4>{item.name}</h4>
-                              <h6> Qty: {item.qty} </h6>
-                              <span>{useButton(item)}</span>
-                              <form
-                                action={`/items/${item._id}?_method=PUT`}
-                                method="POST">
-                                <input
-                                  type="hidden"
-                                  name="qty"
-                                  value={item.qty + 1}
-                                />
-                                <input
-                                  type="submit"
-                                  value="Add One"
-                                  className="info btn btn-outline-light btn-sm"
-                                />
-                              </form>
-                              <a className="info" href={`/items/${item._id}`}>
-                                View
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      );
+                      return displayItem(item);
                     }
                   })}
                 </div>
